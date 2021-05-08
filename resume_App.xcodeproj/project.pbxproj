@@ -19,6 +19,7 @@
 		04A21CB32641049B0098CEB3 /* address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21CB22641049B0098CEB3 /* address.swift */; };
 		04A21CCD26415C180098CEB3 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21CCC26415C180098CEB3 /* Work.swift */; };
 		04A21CD226415C280098CEB3 /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21CD126415C280098CEB3 /* Education.swift */; };
+		04C9708F2646A5C300AD2905 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9708E2646A5C300AD2905 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		04A21CB22641049B0098CEB3 /* address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = address.swift; sourceTree = "<group>"; };
 		04A21CCC26415C180098CEB3 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		04A21CD126415C280098CEB3 /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
+		04C9708E2646A5C300AD2905 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				04A21C802640FD770098CEB3 /* ContentView.swift */,
 				04A21C822640FD790098CEB3 /* Assets.xcassets */,
 				04A21C872640FD790098CEB3 /* Info.plist */,
+				04C9708E2646A5C300AD2905 /* Persistence.swift */,
 				04A21C842640FD790098CEB3 /* Preview Content */,
 			);
 			path = resume_App;
@@ -307,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C9708F2646A5C300AD2905 /* Persistence.swift in Sources */,
 				04A21CAE2641048D0098CEB3 /* home.swift in Sources */,
 				04A21C812640FD770098CEB3 /* ContentView.swift in Sources */,
 				04A21CD226415C280098CEB3 /* Education.swift in Sources */,

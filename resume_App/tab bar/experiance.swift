@@ -8,23 +8,12 @@
 import SwiftUI
 import CoreData
 
-struct dataStore : Identifiable {
-    var id = UUID()
-    let companyname:String
-    let possion:String
-    let month:Date
-    let year:Date
-}
+
+var coredm = CoreDataManager()
+
+
 struct experiance: View {
-
-    @Environment(\.managedObjectContext) private var viewContext
-
-      @FetchRequest(
-          sortDescriptors: [NSSortDescriptor(keyPath: \Job.company, ascending: true)],
-          animation: .default)
-      private var items: FetchedResults<Job>
-    
-    
+  
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         
@@ -42,38 +31,42 @@ struct experiance: View {
     }()
     
     
-    private func addItem() {
-        let newItem = Job(context: viewContext)
-        newItem.company = Company_name
-        newItem.possion = possition
-        newItem.months = monthstart
-        newItem.years = yearstart
-        
-        do {
-            try viewContext.save()
-        } catch {
-            // Error handling
-        }
-    }
+//    private func addItem() {
+//        let newItem = Job(context: viewContext)
+//        newItem.id = UUID()
+//        newItem.company = Company_name
+//        newItem.possion = possition
+//        newItem.months = monthstart
+//        newItem.years = yearstart
+//
+//        do {
+//            try viewContext.save()
+//        } catch {
+//            // Error handling
+//            let nsError = error as NSError
+//            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+//        }
+//    }
     
     
-    @State var storedata : [dataStore] = []
+    
     @State private var years = Date()
     @State private var months = Date()
     
-    @State var Company_name = ""
-    @State var possition = ""
-    @State var start = ""
-    @State var monthstart = ""
-    @State var yearstart = ""
-    @State var birthDates = ""
-    @State var stopmonth = ""
-    @State var stopyear = ""
+    @State private var Company_name = ""
+    @State private var possition = ""
+    @State private var start = ""
+    @State private var monthstart = ""
+    @State private  var yearstart = ""
+    @State private var birthDates = ""
+    @State private var stopmonth = ""
+    @State private var stopyear = ""
     
     @State private var iscurrentwork: Bool = false
     @State private var isToggle: Bool = false
     
     @Binding var showSheetView: Bool
+    
     
     var body: some View {
         NavigationView{
@@ -168,7 +161,7 @@ struct experiance: View {
                                             .padding(.bottom, 2)
                                         
                                         HStack{
-                                            Text("\(months, formatter: dateFormatters)")
+                                            Text("$\(months, formatter: dateFormatters)")
                                             Spacer()
                                             DatePicker(selection: $months, in: ...Date(), displayedComponents: .date) {
                                                 
@@ -222,10 +215,7 @@ struct experiance: View {
                                     guard !self.Company_name.isEmpty else{
                                         return
                                     }
-                                    
-                                    addItem()
-                                    storedata.append(dataStore(companyname: Company_name, possion: possition, month: months, year: years))
-                                    
+                                    coredm.saveMovie(companyname: Company_name, possion: possition, month: monthstart, year: yearstart)
                                     self.showSheetView.toggle()
                                 }, label: {
                                     Text("Save")
@@ -252,6 +242,6 @@ struct experiance: View {
 
 struct experiance_Previews: PreviewProvider {
     static var previews: some View {
-       experiance()
+        Work()
     }
 }

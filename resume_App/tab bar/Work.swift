@@ -38,12 +38,16 @@ struct Work: View {
                                     VStack(alignment: .leading){
                                        
                                             Text(movie.company!)
+                                                .font(.title2)
+                                                .fontWeight(.bold)
                                             Text(movie.possion!)
                                             
                                         }
-                                    }.padding()
+                                   
                                     Spacer()
-                                    VStack{Button(action: {}, label: {
+                                    VStack{Button(action: {
+                                        
+                                    }, label: {
                                         Image(systemName: "trash.fill")
                                             .padding()
                                     })
@@ -51,7 +55,7 @@ struct Work: View {
                                 .shadow(color: .black, radius: 15, x: 5, y: 5)
                                 .cornerRadius(10)
                         
-                            
+                            }
 
                             }
                         }
@@ -84,7 +88,7 @@ struct Work: View {
                 //            }
                 
             }}
-      
+    }
 }
 struct Work_Previews: PreviewProvider {
     static var previews: some View {

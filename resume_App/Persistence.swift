@@ -32,6 +32,8 @@ class CoreDataManager {
     
     func deleteMovie(movie: Job) {
         
+        
+        
         persistentContainer.viewContext.delete(movie)
         
         do {

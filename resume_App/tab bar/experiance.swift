@@ -30,26 +30,7 @@ struct experiance: View {
         return formatter
     }()
     
-    
-//    private func addItem() {
-//        let newItem = Job(context: viewContext)
-//        newItem.id = UUID()
-//        newItem.company = Company_name
-//        newItem.possion = possition
-//        newItem.months = monthstart
-//        newItem.years = yearstart
-//
-//        do {
-//            try viewContext.save()
-//        } catch {
-//            // Error handling
-//            let nsError = error as NSError
-//            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-//        }
-//    }
-    
-    
-    
+ 
     @State private var years = Date()
     @State private var months = Date()
     

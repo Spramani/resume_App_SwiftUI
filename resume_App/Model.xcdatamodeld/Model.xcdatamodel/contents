@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="About" representedClassName="About" syncable="YES" codeGenerationType="class">
+        <attribute name="firstname" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="lastname" optional="YES" attributeType="String"/>
+        <attribute name="middlename" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="College" representedClassName="College" syncable="YES" codeGenerationType="class">
         <attribute name="cname" optional="YES" attributeType="String"/>
         <attribute name="degree" optional="YES" attributeType="String"/>
@@ -23,10 +29,16 @@
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="softname" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Summarys" representedClassName="Summarys" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="summarytxt" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
+        <element name="About" positionX="-54" positionY="36" width="128" height="89"/>
         <element name="College" positionX="-63" positionY="18" width="128" height="104"/>
         <element name="Job" positionX="-63" positionY="-18" width="128" height="104"/>
         <element name="Skill" positionX="-63" positionY="36" width="128" height="59"/>
         <element name="Softweres" positionX="-54" positionY="45" width="128" height="74"/>
+        <element name="Summarys" positionX="-54" positionY="36" width="128" height="59"/>
     </elements>
 </model>

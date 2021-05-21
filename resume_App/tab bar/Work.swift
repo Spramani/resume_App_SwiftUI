@@ -14,8 +14,8 @@ struct Work: View {
     @State var showSheetView = false
     @State private var jobss: [Job] = [Job]()
     
-    private func populateMovies() {
-           jobss = coredm.getAllMovies()
+    private func populatejob() {
+           jobss = coredm.getAlljob()
        }
     
     
@@ -72,7 +72,7 @@ struct Work: View {
                             .onDelete(perform: { indexSet in
                                 indexSet.forEach { index in
                                     let mov = jobss[index]
-                                    coredm.deleteMovie(movie: mov)
+                                    coredm.deletejob(movie: mov)
                                     
                                 }
                             
@@ -101,7 +101,7 @@ struct Work: View {
                         }
                         
                         .onAppear(perform: {
-                            populateMovies()
+                            populatejob()
                                  UITableView.appearance().separatorStyle = .none
                                 
                         })

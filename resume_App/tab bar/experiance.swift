@@ -50,7 +50,7 @@ struct experiance: View {
     @Binding var showSheetView: Bool
     
     private func populateexperiance() {
-        jobss = coredm.getAllMovies()
+        jobss = coredm.getAlljob()
     }
     
     
@@ -202,7 +202,7 @@ struct experiance: View {
                                         return
                                     }
                                     
-                                    coredm.saveMovie(companyname: Company_name, possion: possition, month: monthstart, year: yearstart)
+                                    coredm.savejob(companyname: Company_name, possion: possition, month: monthstart, year: yearstart)
                                     populateexperiance()
                                     self.showSheetView.toggle()
                                 }, label: {

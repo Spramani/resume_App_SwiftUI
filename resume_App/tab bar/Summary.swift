@@ -16,7 +16,9 @@ struct Summary: View {
                     Text("You are almost done")
                         .font(.system(size: 25))
                     Spacer()
-                    Button(action: {}, label: {
+                    Button(action: {
+                        coredm.savesummary(summaryTxt: text)
+                    }, label: {
                         Text("Done")
                             .fontWeight(.bold)
                             .font(.system(size: 20))
@@ -26,10 +28,7 @@ struct Summary: View {
                 .padding(.trailing, 35)
                 
                 VStack{
-//                    Text("sd")
-//                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2, alignment: .center)
-//                        .background(Color.blue)}
-//                    .padding()
+
                     TextEditor(text: $text)
                         .padding()
                         .border(Color.black, width: 5)
@@ -38,7 +37,20 @@ struct Summary: View {
                         .cornerRadius(8)
                       
                 }
-                Spacer()
+                VStack{
+                    Spacer()
+                    Button(action: {}, label: {
+                        Text("Next")
+                    })
+                    .frame(width: UIScreen.main.bounds.width/1.2, height: UIScreen.main.bounds.height/13, alignment: .center)
+                    .background(Color.black)
+                    .cornerRadius(30)
+                    
+                    
+                    
+                }
+                .padding()
+       
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)

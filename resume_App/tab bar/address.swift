@@ -13,6 +13,9 @@ struct address: View {
     @State private var website = ""
     @State private var address = ""
     var body: some View {
+        
+        NavigationView{
+            
         ZStack{
             ScrollView(.vertical, showsIndicators: false){
                 
@@ -68,7 +71,9 @@ struct address: View {
             Spacer()
             VStack{
                 Spacer()
-                Button(action: {}, label: {
+                Button(action: {
+                    addressdata()
+                }, label: {
                     Text("Next")
                 })
                 .frame(width: UIScreen.main.bounds.width/1.2, height: UIScreen.main.bounds.height/13, alignment: .center)
@@ -79,6 +84,15 @@ struct address: View {
             .padding()
             
         }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarHidden(true)
+    }
+    }
+    func addressdata() {
+        UserDefaults.standard.set(email, forKey: "emails")
+        UserDefaults.standard.set(contectno, forKey: "contectnos")
+        UserDefaults.standard.set(website, forKey: "websites")
+        UserDefaults.standard.set(address, forKey: "addresss")
     }
 }
 

@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var defaultView :Int = 0
     @State var selectedTab = Tabs.FirstTab
+
     var about = false
     var body: some View {
         
@@ -159,6 +160,23 @@ struct ContentView: View {
                             .onTapGesture {
                                 self.selectedTab = .sevenTab
                             }
+                            VStack {
+                                Image(systemName: "paperplane.fill")
+                                    .resizable()
+                                    .frame(width: 25, height: 25, alignment: .center)
+                                    .foregroundColor(selectedTab == .EightTab ? Color.white : Color.black)
+                                Text("Done")
+                                    .foregroundColor(selectedTab == .EightTab ? Color.white : Color.black)
+                                Rectangle()
+                                    .frame(width: 77, height: 5, alignment: .center)
+                                    .foregroundColor(selectedTab == .EightTab ? Color.white : Color.black)
+                                    .padding(.leading, 0)
+                                    .padding(.trailing, 0)
+                            }
+                            .padding()
+                            .onTapGesture {
+                                self.selectedTab = .EightTab
+                            }
                         }
                         .padding(.bottom, 10)
                         
@@ -189,6 +207,8 @@ struct ContentView: View {
                     Softwere()
                 }else if selectedTab == .sevenTab {
                     Summary()
+                }else if selectedTab == .EightTab {
+                    Done()
                 }
             }
         }
@@ -204,6 +224,7 @@ enum Tabs {
     case FifthTab
     case SixTab
     case sevenTab
+    case EightTab
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

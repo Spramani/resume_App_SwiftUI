@@ -123,8 +123,6 @@ struct EduDetails: View {
                             if !iscurrentstuding{
                                 
                                 VStack(alignment: .leading) {
-                                    Text("What year did you stop working?")
-                                        .padding(.bottom, 2)
                                     
                                     HStack{
                                         VStack(alignment: .leading) {
@@ -169,7 +167,7 @@ struct EduDetails: View {
                                 coredm.saveCollege(college: School_name, degree: degrees, startyear: Eduyearstart, endyear: Eduyearend)
                                 populateedu()
                                 
-//                                self.showeducationview.toggle()
+                                self.showeducationview.toggle()
                             }, label: {
                                 Text("Save")
                                     .font(.system(size: 20))

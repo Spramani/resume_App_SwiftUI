@@ -109,19 +109,19 @@ struct Education: View {
                     
                 }
                 Spacer()
-                VStack{
-                    Spacer()
-                    Button(action: {}, label: {
-                        Text("Next")
-                    })
-                    .frame(width: UIScreen.main.bounds.width/1.2, height: UIScreen.main.bounds.height/13, alignment: .center)
-                    .background(Color.black)
-                    .cornerRadius(30)
-                    
-                    
-                    
-                }
-                .padding()
+//                VStack{
+//                    Spacer()
+//                    Button(action: {}, label: {
+//                        Text("Next")
+//                    })
+//                    .frame(width: UIScreen.main.bounds.width/1.2, height: UIScreen.main.bounds.height/13, alignment: .center)
+//                    .background(Color.black)
+//                    .cornerRadius(30)
+//                    
+//                    
+//                    
+//                }
+//                .padding()
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)

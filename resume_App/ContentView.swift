@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State private var defaultView :Int = 0
     @State var selectedTab = Tabs.FirstTab
-
+    
+    @State private var nextbutton: Bool = true
     var about = false
     var body: some View {
         
@@ -36,6 +37,9 @@ struct ContentView: View {
                         Spacer()
                     }
                     
+                    .padding(.top, 30)
+                    .padding(.bottom, 0)
+                    
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack {
                             
@@ -48,13 +52,17 @@ struct ContentView: View {
                                     .foregroundColor(selectedTab == .FirstTab ? Color.white : Color.black)
                                 Rectangle()
                                     .frame(width: 60, height: 5, alignment: .center)
+                                    
                                     .foregroundColor(selectedTab == .FirstTab ? Color.white : Color.black)
                                     .padding(.leading, 0)
                                     .padding(.trailing, 0)
                             }
                             .padding()
+                           
+                            
                             .onTapGesture {
                                 self.selectedTab = .FirstTab
+                                nextbutton = true
                             }
                             
                             VStack {
@@ -73,6 +81,7 @@ struct ContentView: View {
                             .padding()
                             .onTapGesture {
                                 self.selectedTab = .SecondTab
+                                nextbutton = true
                             }
                             
                             VStack {
@@ -91,6 +100,7 @@ struct ContentView: View {
                             .padding()
                             .onTapGesture {
                                 self.selectedTab = .ThirdTab
+                                nextbutton = true
                             }
                             VStack {
                                 Image(systemName: "graduationcap.fill")
@@ -108,6 +118,7 @@ struct ContentView: View {
                             .padding()
                             .onTapGesture {
                                 self.selectedTab = .fourthTab
+                                nextbutton = true
                             }
                             VStack {
                                 Image(systemName: "hammer.fill")
@@ -125,6 +136,7 @@ struct ContentView: View {
                             .padding()
                             .onTapGesture {
                                 self.selectedTab = .FifthTab
+                                nextbutton = true
                             }
                             VStack {
                                 Image(systemName: "display")
@@ -142,6 +154,7 @@ struct ContentView: View {
                             .padding()
                             .onTapGesture {
                                 self.selectedTab = .SixTab
+                                nextbutton = true
                             }
                             VStack {
                                 Image(systemName: "book.fill")
@@ -159,6 +172,8 @@ struct ContentView: View {
                             .padding()
                             .onTapGesture {
                                 self.selectedTab = .sevenTab
+                                nextbutton = true
+                                
                             }
                             VStack {
                                 Image(systemName: "paperplane.fill")
@@ -176,12 +191,12 @@ struct ContentView: View {
                             .padding()
                             .onTapGesture {
                                 self.selectedTab = .EightTab
+                                nextbutton = false
                             }
                         }
-                        .padding(.bottom, 10)
+                        .padding(.bottom, 30)
                         
                     }
-                    
                 }
                 
             }
@@ -211,6 +226,46 @@ struct ContentView: View {
                     Done()
                 }
             }
+           if nextbutton{
+            VStack{
+               
+                
+                Button(action: {
+
+                    if selectedTab == .FirstTab {
+                        self.selectedTab = .SecondTab
+                        nextbutton = true
+                    } else if selectedTab == .SecondTab {
+                        self.selectedTab = .ThirdTab
+                        nextbutton = true
+                    } else if selectedTab == .ThirdTab  {
+                        self.selectedTab = .fourthTab
+                        nextbutton = true
+                    }else if selectedTab == .fourthTab  {
+                        self.selectedTab = .FifthTab
+                        nextbutton = true
+                    }else if selectedTab == .FifthTab  {
+                        self.selectedTab = .SixTab
+                        nextbutton = true
+                    }else if selectedTab == .SixTab {
+                        self.selectedTab = .sevenTab
+                        nextbutton = true
+                    }else if selectedTab == .sevenTab {
+                        self.selectedTab = .EightTab
+                        nextbutton = true
+                        nextbutton = false
+                    }
+                }, label: {
+                    Text("Next") .frame(width: UIScreen.main.bounds.width/1.2, height: UIScreen.main.bounds.height/13, alignment: .center)
+                        .background(Color.black)
+                        .cornerRadius(30)
+                })
+                
+                
+            }
+            .padding(.bottom, 10)
+            }
+            
         }
        
     }

@@ -12,6 +12,8 @@ struct home: View {
     @State private var middlename = ""
     @State private var lastname = ""
     
+    
+    
     @State private var showSheet:Bool  = false
     @State private var showImagePicker:Bool  = false
     @State private var sourceType:
@@ -20,6 +22,10 @@ struct home: View {
     @State public var image: UIImage?
     
     @State public var imges = UserDefaults.standard.data(forKey: "imagesss")
+    var firstnames = UserDefaults.standard.string(forKey: "firstname")
+    var lastnames = UserDefaults.standard.string(forKey: "lastname")
+    var middlenames = UserDefaults.standard.string(forKey: "middlename")
+   
     
     
     var body: some View {
@@ -32,12 +38,12 @@ struct home: View {
                             if imges == nil{
                                 Image(systemName: "person.fill")
                                     .resizable()
-                                    
+                                    .frame(width: 110, height: 110, alignment: .center)
                                     
                                     .clipShape(Circle())
                                     .shadow(radius: 10)
                                     .overlay(Circle().stroke(Color.black, lineWidth: 1))
-                                    .frame(width: 100, height: 100, alignment: .center)
+                                    
                             }else{
                                 Image(uiImage: (UIImage(data: imges!)!))
                                     .resizable()
@@ -46,9 +52,6 @@ struct home: View {
                                     .overlay(Circle().stroke(Color.black, lineWidth: 1))
                                     .frame(width: 100, height: 100, alignment: .center)
                             }
-                            
-                            
-                            
                             
                             Button(action: {
                                 showSheet = true
@@ -80,13 +83,16 @@ struct home: View {
                     }
                     VStack(alignment: .leading){
                         Text("Let`s get startes with your name")
-                            .font(.system(size: 25))
+                            .font(.system(size: 20))
                             .padding(.bottom, 20)
                         Text("Whats is your name?")
                             .padding(.bottom, 30)
-                        TextField("First Name", text: $firstname) {
+                       VStack{
+                        
+                        TextField(firstnames ?? "firstname" , text: $firstname, onCommit:  {
                             UserDefaults.standard.set(firstname, forKey: "firstname")
-                        }
+                        })}
+                        
                         
                         Rectangle()
                             .frame(height: 1)
@@ -95,7 +101,9 @@ struct home: View {
                             .padding(.trailing, 0)
                             .padding(.bottom, 30)
                         
-                        TextField("Middle Name", text: $middlename)
+                        TextField(middlenames ?? "Middle Name", text: $middlename, onCommit:  {
+                            UserDefaults.standard.set(middlename, forKey: "middlename")
+                        })
                         Rectangle()
                             .frame(height: 1)
                             .foregroundColor(.black)
@@ -103,7 +111,9 @@ struct home: View {
                             .padding(.bottom, 30)
                             .padding(.trailing, 0)
                         
-                        TextField("Last Name", text: $lastname)
+                        TextField(lastnames ?? "Last Name", text: $lastname, onCommit:  {
+                            UserDefaults.standard.set(lastname, forKey: "lastname")
+                        })
                         Rectangle()
                             .frame(height: 1)
                             .foregroundColor(.black)
@@ -120,25 +130,6 @@ struct home: View {
                     }}
                     .padding()
                 Spacer()
-                VStack{
-                    Spacer()
-                    
-                    Button(action: {
-                        let data = image?.jpegData(compressionQuality: 1)
-                        let str = data?.base64EncodedString()
-                        
-                        userdata()
-                        
-                        coredm.saveabout(firstname: firstname, middlename: middlename, lastname: lastname)
-                        print(coredm.getallAbout())
-                    }, label: {
-                        Text("Next") .frame(width: UIScreen.main.bounds.width/1.2, height: UIScreen.main.bounds.height/13, alignment: .center)
-                            .background(Color.black)
-                            .cornerRadius(30)
-                    })
-                    
-                }
-                .padding()
                 
             }
             .navigationBarTitleDisplayMode(.inline)
@@ -150,10 +141,10 @@ struct home: View {
         }
     }
     func userdata() {
-       
+        UserDefaults.standard.set(firstname, forKey: "firstname")
         UserDefaults.standard.set(lastname, forKey: "lastname")
         UserDefaults.standard.set(middlename, forKey: "middlename")
-        //        UserDefaults.standard.set(image, forKey: "images")
+
         
         
     }

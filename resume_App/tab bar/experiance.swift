@@ -13,27 +13,14 @@ var coredm = CoreDataManager()
 
 
 struct experiance: View {
-  
-    let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        
-        formatter.dateFormat = "yyyy"
-        
-        return formatter
-    }()
+//
     
-    let dateFormatters: DateFormatter = {
-        let formatter = DateFormatter()
-        
-        formatter.dateFormat = "MM"
-        
-        return formatter
-    }()
+    
+    var jobed = Job.self
     @State private var jobss: [Job] = [Job]()
   
- 
-    @State private var years = Date()
-    @State private var months = Date()
+    @Binding var needreferesh: Bool
+    
     
     @State private var Company_name = ""
     @State private var possition = ""
@@ -55,6 +42,7 @@ struct experiance: View {
     
     
     var body: some View {
+        
         NavigationView{
             
             ZStack{
@@ -146,21 +134,14 @@ struct experiance: View {
                                         Text("What month did you stop working?")
                                             .padding(.bottom, 2)
                                         
-                                        HStack{
-                                            Text("$\(months, formatter: dateFormatters)")
-                                            Spacer()
-                                            DatePicker(selection: $months, in: ...Date(), displayedComponents: .date) {
-                                                
-                                            }
+                                            TextField("month", text: $stopmonth)
+                                                .font(.system(size: 25))
+                                            Rectangle()
+                                                .frame(height: 1)
+                                                .foregroundColor(.black)
+                                                .padding(.leading, 0)
+                                                .padding(.trailing, 0)
                                             
-                                        }
-                                            .font(.system(size: 25))
-                                        Rectangle()
-                                            .frame(height: 1)
-                                            .foregroundColor(.black)
-                                            .padding(.leading, 0)
-                                            .padding(.trailing, 0)
-                                        
                                     }.labelsHidden()
                                     .padding()
                                     
@@ -168,23 +149,18 @@ struct experiance: View {
                                         Text("What year did you stop working?")
                                             .padding(.bottom, 2)
                                         
-                                        HStack{
-                                            Text("\(years, formatter: dateFormatter)")
-                                            Spacer()
-                                            DatePicker(selection: $years, in: ...Date(), displayedComponents: .date) {
-                                                
-                                            }
-                                            
-                                        }
-                                        
-                                        //
-                                        .font(.system(size: 25))
+                                        TextField("Associate", text: $stopyear)
+                                            .font(.system(size: 25))
                                         Rectangle()
                                             .frame(height: 1)
                                             .foregroundColor(.black)
                                             .padding(.leading, 0)
                                             .padding(.trailing, 0)
                                         
+                                            
+                                        
+                                        
+                                       
                                     }.labelsHidden()
                                     .padding()
                                 }
@@ -202,9 +178,11 @@ struct experiance: View {
                                         return
                                     }
                                     
-                                    coredm.savejob(companyname: Company_name, possion: possition, month: monthstart, year: yearstart)
+                                    coredm.savejob(companyname: Company_name, possion: possition, month: monthstart, year: yearstart,endmonth: stopmonth,endyear: stopyear)
                                     populateexperiance()
+                                    self.needreferesh.toggle()
                                     self.showSheetView.toggle()
+                                  
                                 }, label: {
                                     Text("Save")
                                         .font(.system(size: 20))
@@ -234,6 +212,8 @@ struct experiance: View {
 
 struct experiance_Previews: PreviewProvider {
     static var previews: some View {
-        Work()
+        let jobed = Job()
+    
+        experiance(needreferesh: .constant(false), showSheetView: .constant(false))
     }
 }

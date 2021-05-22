@@ -15,6 +15,8 @@
     </entity>
     <entity name="Job" representedClassName="Job" syncable="YES" codeGenerationType="class">
         <attribute name="company" attributeType="String"/>
+        <attribute name="endmonth" optional="YES" attributeType="String"/>
+        <attribute name="endyear" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="months" attributeType="String"/>
         <attribute name="possion" attributeType="String"/>
@@ -36,7 +38,7 @@
     <elements>
         <element name="About" positionX="-54" positionY="36" width="128" height="89"/>
         <element name="College" positionX="-63" positionY="18" width="128" height="104"/>
-        <element name="Job" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="Job" positionX="-63" positionY="-18" width="128" height="134"/>
         <element name="Skill" positionX="-63" positionY="36" width="128" height="59"/>
         <element name="Softweres" positionX="-54" positionY="45" width="128" height="74"/>
         <element name="Summarys" positionX="-54" positionY="36" width="128" height="59"/>

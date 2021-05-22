@@ -8,10 +8,16 @@
 import SwiftUI
 
 struct address: View {
+    @State var isanimated:Bool = true
+    
     @State private var email = ""
     @State private var contectno = ""
     @State private var website = ""
     @State private var address = ""
+    var emails = UserDefaults.standard.string(forKey: "emails")
+    var contectnos = UserDefaults.standard.string( forKey: "contectnos")
+    var websites = UserDefaults.standard.string( forKey: "websites")
+    var addresss = UserDefaults.standard.string( forKey: "addresss")
     var body: some View {
         
         NavigationView{
@@ -28,7 +34,10 @@ struct address: View {
                         .padding(.bottom, 30)
                     
                     VStack{
-                        TextField("example@gmail.com", text: $email)
+                        TextField(emails ?? "example@gmail.com", text: $email, onCommit:
+                                    {
+                                        UserDefaults.standard.set(email, forKey: "emails")
+                                    })
                         Rectangle()
                             .frame(height: 1)
                             .foregroundColor(.black)
@@ -36,7 +45,11 @@ struct address: View {
                             .padding(.trailing, 0)
                             .padding(.bottom, 30)
                         
-                        TextField("(91) 777888787", text: $contectno)
+                        TextField(contectnos ?? "(91) 777888787", text: $contectno, onCommit:
+                                    {
+                                        UserDefaults.standard.set(contectno, forKey: "contectnos")
+                                    })
+                            .keyboardType(.numberPad)
                         Rectangle()
                             .frame(height: 1)
                             .foregroundColor(.black)
@@ -44,7 +57,10 @@ struct address: View {
                             .padding(.bottom, 30)
                             .padding(.trailing, 0)
                         
-                        TextField("www.website.com", text: $website)
+                        TextField(websites ?? "www.website.com", text: $website, onCommit:
+                                    {
+                                        UserDefaults.standard.set(website, forKey: "websites")
+                                    })
                         Rectangle()
                             .frame(height: 1)
                             .foregroundColor(.black)
@@ -53,7 +69,10 @@ struct address: View {
                             .padding(.bottom, 30)
                         
                         
-                        TextField("address", text: $address)
+                        TextField(addresss ?? "address" , text: $address, onCommit:
+                                    {
+                                        UserDefaults.standard.set(address, forKey: "addresss")
+                                    })
                         Rectangle()
                             .frame(height: 1)
                             .foregroundColor(.black)
@@ -69,19 +88,26 @@ struct address: View {
                 }}
                 .padding()
             Spacer()
-            VStack{
-                Spacer()
-                Button(action: {
-                    addressdata()
-                }, label: {
-                    Text("Next")
-                })
-                .frame(width: UIScreen.main.bounds.width/1.2, height: UIScreen.main.bounds.height/13, alignment: .center)
-                .background(Color.black)
-                .cornerRadius(30)
-                
-            }
-            .padding()
+//            VStack{
+//                Spacer()
+//                Button(action: {
+//                    addressdata()
+//                    isanimated.toggle()
+//                }, label: {
+//                    
+//                   
+//                        Text("Next")
+//                            .frame(width: isanimated ? UIScreen.main.bounds.width/1.2 : 70, height: isanimated ? UIScreen.main.bounds.height/13 : 70, alignment: .center)
+//                            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing))
+//                            .cornerRadius(30)
+//                            .rotationEffect(Angle(degrees: isanimated ? 360 : 0))
+//                   
+//                })
+//                
+//               
+//                
+//            }
+//            .padding()
             
         }
         .navigationBarTitleDisplayMode(.inline)

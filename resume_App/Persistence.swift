@@ -85,13 +85,15 @@ class CoreDataManager {
     }
     
     //MARK: - savemovie
-    func savejob(companyname:String, possion:String, month:String, year:String) {
+    func savejob(companyname:String, possion:String, month:String, year:String, endmonth:String, endyear:String) {
         
         let jobs = Job(context: persistentContainer.viewContext)
         jobs.company = companyname
         jobs.possion = possion
         jobs.months = month
         jobs.years = year
+        jobs.endmonth = endmonth
+        jobs.endyear = endyear
         
         do {
             try persistentContainer.viewContext.save()

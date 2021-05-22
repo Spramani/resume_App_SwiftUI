@@ -35,7 +35,7 @@ struct Done: View {
     var websites = UserDefaults.standard.string(forKey: "websites")
     var addresss = UserDefaults.standard.string(forKey: "addresss")
     
-    var page = home( )
+
     
     var body: some View {
         NavigationView{
@@ -64,10 +64,10 @@ struct Done: View {
                             
                          
                         
-                        Text(firstnames! + lastnames!)
-                            .frame(width: UIScreen.main.bounds.width, alignment: .center)
-                            .padding(.bottom, 1)
-                        
+//                        Text(firstnames ?? "name" + lastnames! ?? "lastname")
+//                            .frame(width: UIScreen.main.bounds.width, alignment: .center)
+//                            .padding(.bottom, 1)
+//                        
                         HStack{
                             Text("7575031095 | shubhamramani@gmail.com | http://ssa")
                                 .padding(.leading, 0)
@@ -225,7 +225,7 @@ struct Done: View {
                         
                         
                     }
-                    
+                    .padding(.top, 10)
                     .background(Color.white)
                     
                 }}

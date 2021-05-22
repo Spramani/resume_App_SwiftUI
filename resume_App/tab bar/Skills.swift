@@ -62,11 +62,18 @@ struct Skills: View {
                             indexSet.forEach { index in
                                 let skillss = skillss[index]
                                 coredm.deleteskill(skill: skillss)
+                                populateskill()
                                 Textfield = ""
                             }
                             
                         })
-                        Button(action: {coredm.saveSkill(skill: Textfield)
+                        Button(action: {
+                            guard Textfield != "" else {
+                                
+                                return
+                            }
+                            coredm.saveSkill(skill: Textfield)
+                            
                             populateskill()
                         }, label: {
                             HStack{
@@ -96,19 +103,19 @@ struct Skills: View {
                     
                 }
                 Spacer()
-                VStack{
-                    Spacer()
-                    Button(action: {}, label: {
-                        Text("Next")
-                    })
-                    .frame(width: UIScreen.main.bounds.width/1.2, height: UIScreen.main.bounds.height/13, alignment: .center)
-                    .background(Color.black)
-                    .cornerRadius(30)
-                    
-                    
-                    
-                }
-                .padding()
+//                VStack{
+//                    Spacer()
+//                    Button(action: {}, label: {
+//                        Text("Next")
+//                    })
+//                    .frame(width: UIScreen.main.bounds.width/1.2, height: UIScreen.main.bounds.height/13, alignment: .center)
+//                    .background(Color.black)
+//                    .cornerRadius(30)
+//                    
+//                    
+//                    
+//                }
+//                .padding()
                 
                
             }

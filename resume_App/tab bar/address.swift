@@ -34,10 +34,13 @@ struct address: View {
                         .padding(.bottom, 30)
                     
                     VStack{
-                        TextField(emails ?? "example@gmail.com", text: $email, onCommit:
+                        TextField("example@gmail.com", text: $email, onCommit:
                                     {
                                         UserDefaults.standard.set(email, forKey: "emails")
                                     })
+                            .onAppear(perform: {
+                                email = emails ?? ""
+                            })
                         Rectangle()
                             .frame(height: 1)
                             .foregroundColor(.black)
@@ -45,10 +48,13 @@ struct address: View {
                             .padding(.trailing, 0)
                             .padding(.bottom, 30)
                         
-                        TextField(contectnos ?? "(91) 777888787", text: $contectno, onCommit:
+                        TextField("(91) 777888787", text: $contectno, onCommit:
                                     {
                                         UserDefaults.standard.set(contectno, forKey: "contectnos")
                                     })
+                            .onAppear(perform: {
+                                contectno = contectnos ?? ""
+                            })
                             .keyboardType(.numberPad)
                         Rectangle()
                             .frame(height: 1)
@@ -57,10 +63,13 @@ struct address: View {
                             .padding(.bottom, 30)
                             .padding(.trailing, 0)
                         
-                        TextField(websites ?? "www.website.com", text: $website, onCommit:
+                        TextField("www.website.com", text: $website, onCommit:
                                     {
                                         UserDefaults.standard.set(website, forKey: "websites")
                                     })
+                            .onAppear(perform: {
+                                website = websites ?? ""
+                            })
                         Rectangle()
                             .frame(height: 1)
                             .foregroundColor(.black)
@@ -69,10 +78,13 @@ struct address: View {
                             .padding(.bottom, 30)
                         
                         
-                        TextField(addresss ?? "address" , text: $address, onCommit:
+                        TextField("address" , text: $address, onCommit:
                                     {
                                         UserDefaults.standard.set(address, forKey: "addresss")
                                     })
+                            .onAppear(perform: {
+                                address = addresss ?? ""
+                            })
                         Rectangle()
                             .frame(height: 1)
                             .foregroundColor(.black)
@@ -81,7 +93,7 @@ struct address: View {
                     }
                     Text("usually first and last name is required, but feel free to include your middle name as part of the first name ")
                         .padding(.top, 60)
-                        .padding(.bottom, 80)
+                        .padding(.bottom, 40)
                     Spacer()
                     
                     
@@ -111,8 +123,8 @@ struct address: View {
             
         }
         .navigationBarTitleDisplayMode(.inline)
-        .navigationBarHidden(true)
-    }
+        
+    }.navigationBarHidden(true)
     }
     func addressdata() {
         UserDefaults.standard.set(email, forKey: "emails")

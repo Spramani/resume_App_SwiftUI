@@ -116,12 +116,13 @@ struct Skills: View {
 //                    
 //                }
 //                .padding()
-                
+                   
                
             }
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarHidden(true)
+           
         }
+        .navigationBarHidden(true)
     }
 }
 

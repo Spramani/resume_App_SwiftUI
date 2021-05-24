@@ -23,6 +23,7 @@ struct home: View {
     
     @State public var imges = UserDefaults.standard.data(forKey: "imagesss")
     var firstnames = UserDefaults.standard.string(forKey: "firstname")
+    
     var lastnames = UserDefaults.standard.string(forKey: "lastname")
     var middlenames = UserDefaults.standard.string(forKey: "middlename")
    
@@ -89,9 +90,12 @@ struct home: View {
                             .padding(.bottom, 30)
                        VStack{
                         
-                        TextField(firstnames ?? "firstname" , text: $firstname, onCommit:  {
+                        TextField("firstname" , text: $firstname, onCommit:  {
                             UserDefaults.standard.set(firstname, forKey: "firstname")
                         })}
+                        .onAppear(perform: {
+                            firstname = firstnames ?? ""
+                        })
                         
                         
                         Rectangle()
@@ -104,6 +108,9 @@ struct home: View {
                         TextField(middlenames ?? "Middle Name", text: $middlename, onCommit:  {
                             UserDefaults.standard.set(middlename, forKey: "middlename")
                         })
+                        .onAppear(perform: {
+                            middlename = middlenames ?? ""
+                        })
                         Rectangle()
                             .frame(height: 1)
                             .foregroundColor(.black)
@@ -114,6 +121,10 @@ struct home: View {
                         TextField(lastnames ?? "Last Name", text: $lastname, onCommit:  {
                             UserDefaults.standard.set(lastname, forKey: "lastname")
                         })
+                        .onAppear(perform: {
+                            lastname = lastnames ?? ""
+                        })
+                        
                         Rectangle()
                             .frame(height: 1)
                             .foregroundColor(.black)
@@ -123,18 +134,19 @@ struct home: View {
                         
                         Text("usually first and last name is required, but feel free to include your middle name as part of the first name ")
                             .padding(.top, 60)
-                            .padding(.bottom, 80)
+                            .padding(.bottom, 40)
                         Spacer()
                         
                         
                     }}
+                    
                     .padding()
                 Spacer()
                 
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarHidden(true)
-        }
+      
+        }      .navigationBarTitleDisplayMode(.inline)
+        .navigationBarHidden(true)
         .sheet(isPresented: $showImagePicker) {
             ImagePicker(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType)
             

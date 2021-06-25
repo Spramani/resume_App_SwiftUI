@@ -119,9 +119,7 @@ struct SideMenuView: View {
                                 .font(.system(size: 20))
                         Spacer()
                         }.padding()
-                        
                     }
-
                     Spacer()
                 } .foregroundColor(.black)}
             }.navigationBarHidden(true)

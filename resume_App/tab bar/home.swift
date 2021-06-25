@@ -32,8 +32,11 @@ struct home: View {
     var body: some View {
         NavigationView{
             ZStack{
+                
                 ScrollView(.vertical, showsIndicators: false){
+                  
                     VStack{
+
                         HStack{
                             
                             if imges == nil{
@@ -144,9 +147,12 @@ struct home: View {
                 Spacer()
                 
             }
+            
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
+        }
       
-        }      .navigationBarTitleDisplayMode(.inline)
-        .navigationBarHidden(true)
+       
         .sheet(isPresented: $showImagePicker) {
             ImagePicker(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType)
             

